@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/chatrowguide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/chatrowdpimageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/chatrowguide1" />
+
+    <TextView
+        android:id="@+id/chatrownametextview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:paddingLeft="4dp"
+        android:paddingBottom="4dp"
+        android:text="Name LastName"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/chatrowusernametextview"
+        app:layout_constraintLeft_toRightOf="@id/chatrowdpimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chatrowusernametextview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:text="Username"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/chatrowdpimageview"
+        app:layout_constraintLeft_toRightOf="@id/chatrowdpimageview"
+        app:layout_constraintRight_toLeftOf="@id/chatrowstatustextview"
+        app:layout_constraintTop_toBottomOf="@id/chatrownametextview" />
+
+    <TextView
+        android:id="@+id/chatrowstatustextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:text="Online"
+        android:textColor="#00aa00"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/chatrowusernametextview"
+        app:layout_constraintLeft_toRightOf="@id/chatrowusernametextview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chatrowusernametextview" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signinparentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/signinlogoimageview"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_thelogo"
+        app:layout_constraintDimensionRatio="V,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/signinmaillogoimageview"
+        style="@style/authlogostyle"
+        android:src="@drawable/vector_mail"
+        app:layout_constraintBottom_toBottomOf="@id/signinmailedittextlayout"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signinmailedittextlayout"
+        app:layout_constraintTop_toTopOf="@id/signinmailedittextlayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/signinmailedittextlayout"
+        style="@style/authedittextstyle"
+        android:layout_marginBottom="16dp"
+        android:hint="Email"
+        app:layout_constraintBottom_toTopOf="@id/signinpasswordedittextlayout"
+        app:layout_constraintLeft_toRightOf="@id/signinmaillogoimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signinlogoimageview"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/signinmailedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/signinpasswordlogoimageview"
+        style="@style/authlogostyle"
+        android:src="@drawable/vector_lock"
+        app:layout_constraintBottom_toBottomOf="@id/signinpasswordedittextlayout"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signinpasswordedittextlayout"
+        app:layout_constraintTop_toTopOf="@id/signinpasswordedittextlayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/signinpasswordedittextlayout"
+        style="@style/authedittextstyle"
+        android:layout_marginBottom="16dp"
+        android:hint="Password"
+        app:layout_constraintBottom_toTopOf="@id/signinsigninbutton"
+        app:layout_constraintLeft_toRightOf="@id/signinpasswordlogoimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signinmailedittextlayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/signinpasswordedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/signinsigninbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_background"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:text="Sign In"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signinpasswordedittextlayout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/signinsignuplinktextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:gravity="right"
+            android:text="Don't have account? "
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/signinsignuplinkbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="Sign Up"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

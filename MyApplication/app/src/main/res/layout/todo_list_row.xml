@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/todo_row_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:backgroundTint="@color/colorWhite"
+        android:src="@drawable/vector_check_box_outline_blank_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/todo_row_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:ellipsize="end"
+        android:hint="Todo List Item Title"
+        android:maxLines="1"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/todo_row_checkbox"
+        app:layout_constraintRight_toLeftOf="@id/todo_row_editbutton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/todo_row_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorGray"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/todo_row_textview"
+        app:layout_constraintLeft_toLeftOf="@id/todo_row_textview"
+        app:layout_constraintRight_toRightOf="@id/todo_row_textview"
+        app:layout_constraintTop_toTopOf="@id/todo_row_textview" />
+
+    <ImageButton
+        android:id="@+id/todo_row_editbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/colorWhite"
+        android:src="@drawable/vector_edit_24dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/todo_row_textview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NotesEditActivity">
+
+    <EditText
+        android:id="@+id/noteseditactivity_title_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#000"
+        android:backgroundTint="#dfdfdf"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="4dp"
+        android:text="Title"
+        android:textSize="24dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#5f5f5f" />
+
+    <EditText
+        android:id="@+id/noteseditactivity_note_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#fff"
+        android:hint="type note here "
+        android:lineSpacingExtra="4dp"
+        android:padding="8dp"
+        android:textSize="20dp" />
+
+</LinearLayout>

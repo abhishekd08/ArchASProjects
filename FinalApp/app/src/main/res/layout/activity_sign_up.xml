@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signupparentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/signuplogoimageview"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_thelogo"
+
+        app:layout_constraintDimensionRatio="V,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/signupnamelogoimageview"
+        style="@style/authlogostyle"
+        android:src="@drawable/vector_person"
+        app:layout_constraintBottom_toBottomOf="@id/signupnameedittextlayout"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signupnameedittextlayout"
+        app:layout_constraintTop_toTopOf="@id/signupnameedittextlayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/signupnameedittextlayout"
+        style="@style/authedittextstyle"
+        android:hint="Name"
+        app:layout_constraintBottom_toTopOf="@id/signupmailedittextlayout"
+        app:layout_constraintLeft_toRightOf="@id/signupnamelogoimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signuplogoimageview">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/signupnameedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/signupmaillogoimageview"
+        style="@style/authlogostyle"
+        android:src="@drawable/vector_mail"
+        app:layout_constraintBottom_toBottomOf="@id/signupmailedittextlayout"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signupmailedittextlayout"
+        app:layout_constraintTop_toTopOf="@id/signupmailedittextlayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/signupmailedittextlayout"
+        style="@style/authedittextstyle"
+        android:hint="Email"
+        app:layout_constraintBottom_toTopOf="@id/signuppasswordedittextlayout"
+        app:layout_constraintLeft_toRightOf="@id/signupmaillogoimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupnameedittextlayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/signupmailedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/signuppasswordlogoimageview"
+        style="@style/authlogostyle"
+        android:src="@drawable/vector_lock"
+        app:layout_constraintBottom_toBottomOf="@id/signuppasswordedittextlayout"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signuppasswordedittextlayout"
+        app:layout_constraintTop_toTopOf="@id/signuppasswordedittextlayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/signuppasswordedittextlayout"
+        style="@style/authedittextstyle"
+        android:hint="Password"
+        app:layout_constraintBottom_toTopOf="@id/signupconfirmpasswordedittextlayout"
+        app:layout_constraintLeft_toRightOf="@id/signuppasswordlogoimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupmailedittextlayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/signuppasswordedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/signupconfirmpasswordlogoimageview"
+        style="@style/authlogostyle"
+        android:src="@drawable/vector_lock"
+        app:layout_constraintBottom_toBottomOf="@id/signupconfirmpasswordedittextlayout"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signupconfirmpasswordedittextlayout"
+        app:layout_constraintTop_toTopOf="@id/signupconfirmpasswordedittextlayout" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/signupconfirmpasswordedittextlayout"
+        style="@style/authedittextstyle"
+        android:hint="Confirm Password"
+        app:layout_constraintBottom_toTopOf="@id/signupsignupbutton"
+        app:layout_constraintLeft_toRightOf="@id/signupconfirmpasswordlogoimageview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signuppasswordedittextlayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/signupconfirmpasswordedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/signupsignupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:text="Sign Up"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/signuplastlayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupconfirmpasswordedittextlayout" />
+
+    <LinearLayout
+        android:id="@+id/signuplastlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/signupsigninlinktextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:gravity="right"
+            android:text="Already have account?"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/signupsigninlinkbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="Sign In"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

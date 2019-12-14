@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileparentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ProfileActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/profileguide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/profileguide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/profileguide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/profilenametextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/colorAccent"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/profileguide1" />
+
+    <ImageView
+        android:id="@+id/profilescaleimageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_thescale_1"
+        app:layout_constraintBottom_toTopOf="@id/profilemeasurebutton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/profileguide2"
+        app:layout_constraintTop_toBottomOf="@id/profilenametextview" />
+
+    <TextView
+        android:id="@+id/profileshouldertextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Shoulders : 150 cm"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/profilechesttextview"
+        app:layout_constraintLeft_toRightOf="@id/profileguide2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilenametextview" />
+
+    <TextView
+        android:id="@+id/profilechesttextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Chest : 150 cm"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/profilewaisttextview"
+        app:layout_constraintLeft_toLeftOf="@id/profileshouldertextview"
+        app:layout_constraintRight_toRightOf="@id/profileshouldertextview"
+        app:layout_constraintTop_toBottomOf="@id/profileshouldertextview" />
+
+    <TextView
+        android:id="@+id/profilewaisttextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Waist : 150 cm"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/profilemeasurebutton"
+        app:layout_constraintLeft_toLeftOf="@id/profileshouldertextview"
+        app:layout_constraintRight_toRightOf="@id/profileshouldertextview"
+        app:layout_constraintTop_toBottomOf="@id/profilechesttextview" />
+
+    <Button
+        android:id="@+id/profilemeasurebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:text="Measure"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/profileguide3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/profileemptyframelayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorWhite"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/profilemeasurebutton"
+        app:layout_constraintLeft_toRightOf="@id/profileguide2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilenametextview">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Create New Profile !"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
